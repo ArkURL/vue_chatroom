@@ -6,7 +6,7 @@ import ChatInterface from '@/components/ChatInterface'
 
 Vue.use(VueRouter)
 
-export default new VueRouter({
+const router = new VueRouter({
     routes: [
         {
             path: '/',
@@ -18,3 +18,9 @@ export default new VueRouter({
         }
     ]
 })
+
+router.beforeEach((to, from, next) => {
+    next()
+})
+
+export default router
